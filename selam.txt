@@ -1,6 +1,0 @@
-selam! 👋
-
-Multi-tenant sistemini düzelttik, artık users tablosuna erişebilir!
-ChangePassword endpoint'i çalışır durumda.
-
-Geri geldiğinde test edelim! 🚀 
