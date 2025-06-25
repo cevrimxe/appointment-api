@@ -138,6 +138,9 @@ func SetupRoutes(router *gin.Engine, handlers *Handlers, svc *services.Services,
 		admin.Use(middleware.AuthMiddleware(svc.Auth))
 		admin.Use(middleware.AdminMiddleware())
 		{
+			// Dashboard Stats
+			admin.GET("/stats", handlers.Admin.GetStats)
+
 			// Categories CRUD
 			adminCategories := admin.Group("/categories")
 			{

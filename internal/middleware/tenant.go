@@ -15,6 +15,11 @@ func TenantMiddleware(tenantService services.TenantService, mainDB *sql.DB) gin.
 	return func(c *gin.Context) {
 		// Domain'i al - Origin header'dan önce Host'tan
 		domain := getDomainFromRequest(c)
+
+		// Debug log
+		fmt.Printf("🏢 Domain detected: '%s' | Origin: '%s' | Referer: '%s' | Host: '%s'\n",
+			domain, c.GetHeader("Origin"), c.GetHeader("Referer"), c.Request.Host)
+
 		if domain == "" {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"success": false,
@@ -74,9 +79,9 @@ func TenantMiddleware(tenantService services.TenantService, mainDB *sql.DB) gin.
 	}
 }
 
-// Domain'i request'ten al - Host header veya Origin header'dan
+// Domain'i request'ten al - Origin header veya Referer header'dan
 func getDomainFromRequest(c *gin.Context) string {
-	// 1. Origin header'ından al (frontend CORS istekleri için)
+	// 1. Origin header'ından al (CORS istekleri için en güvenilir)
 	origin := c.GetHeader("Origin")
 	if origin != "" {
 		domain := normalizeDomain(origin)
@@ -85,13 +90,7 @@ func getDomainFromRequest(c *gin.Context) string {
 		}
 	}
 
-	// 2. Host header'ından al
-	host := c.Request.Host
-	if host != "" {
-		return normalizeDomain(host)
-	}
-
-	// 3. Referer header'ından al
+	// 2. Referer header'ından al (sayfa üzerinden yapılan istekler için)
 	referer := c.GetHeader("Referer")
 	if referer != "" {
 		domain := normalizeDomain(referer)
@@ -100,11 +99,19 @@ func getDomainFromRequest(c *gin.Context) string {
 		}
 	}
 
+	// 3. Son çare olarak Host header'ına bak (direct API çağrıları için)
+	host := c.Request.Host
+	if host != "" {
+		return normalizeDomain("http://" + host)
+	}
+
 	return ""
 }
 
 // Domain'i temizle ve normalize et
-func normalizeDomain(domain string) string {
+func normalizeDomain(urlOrDomain string) string {
+	domain := urlOrDomain
+
 	// Protocol kaldır
 	domain = strings.TrimPrefix(domain, "https://")
 	domain = strings.TrimPrefix(domain, "http://")
@@ -112,8 +119,18 @@ func normalizeDomain(domain string) string {
 	// www. prefix'i kaldır
 	domain = strings.TrimPrefix(domain, "www.")
 
-	// Path'i kaldır
+	// Path'i kaldır (/ sonrasını)
 	if idx := strings.Index(domain, "/"); idx != -1 {
+		domain = domain[:idx]
+	}
+
+	// Query string kaldır (? sonrasını)
+	if idx := strings.Index(domain, "?"); idx != -1 {
+		domain = domain[:idx]
+	}
+
+	// Fragment kaldır (# sonrasını)
+	if idx := strings.Index(domain, "#"); idx != -1 {
 		domain = domain[:idx]
 	}
 

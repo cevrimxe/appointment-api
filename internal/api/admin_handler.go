@@ -227,3 +227,19 @@ func (h *AdminHandler) DeleteContactMessage(c *gin.Context)    { c.JSON(200, gin
 func (h *AdminHandler) GetSalesReports(c *gin.Context)         { c.JSON(200, gin.H{"message": "TODO"}) }
 func (h *AdminHandler) GetPaymentReports(c *gin.Context)       { c.JSON(200, gin.H{"message": "TODO"}) }
 func (h *AdminHandler) GetAppointmentReports(c *gin.Context)   { c.JSON(200, gin.H{"message": "TODO"}) }
+
+// Dashboard Stats
+func (h *AdminHandler) GetStats(c *gin.Context) {
+	// Demo stats - gerçek veriler için servis methodları gerekli
+	stats := gin.H{
+		"today_appointments":   12,
+		"total_revenue":        45000.50,
+		"total_users":          156,
+		"pending_appointments": 8,
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"data":    stats,
+	})
+}
