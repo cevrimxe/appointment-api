@@ -8,7 +8,7 @@ import (
 )
 
 type TenantService interface {
-	GetTenantByHost(host string) (*models.TenantConfig, error)
+	GetTenantByDomain(domain string) (*models.TenantConfig, error)
 	CreateTenantSchema(schemaName string) error
 	GetAllTenants() ([]*models.Tenant, error)
 }
@@ -21,45 +21,37 @@ func NewTenantService(db *sql.DB) TenantService {
 	return &tenantService{db: db}
 }
 
-func (s *tenantService) GetTenantByHost(host string) (*models.TenantConfig, error) {
-	var subdomain string
-
-	// Remove port from host if present
-	hostParts := strings.Split(host, ":")
-	hostWithoutPort := hostParts[0]
-
-	// Extract subdomain from host
-	parts := strings.Split(hostWithoutPort, ".")
-
-	if len(parts) == 1 {
-		// Single part (e.g., "localhost")
-		if hostWithoutPort == "localhost" || hostWithoutPort == "127.0.0.1" {
-			subdomain = "main"
-		} else {
-			return nil, fmt.Errorf("invalid host format")
-		}
-	} else {
-		// Multiple parts (e.g., "test.localhost", "www.example.com")
-		subdomain = parts[0]
-		if subdomain == "www" && len(parts) > 2 {
-			subdomain = parts[1]
-		}
-	}
+func (s *tenantService) GetTenantByDomain(domain string) (*models.TenantConfig, error) {
+	// Domain'i temizle ve normalize et
+	cleanDomain := s.normalizeDomain(domain)
 
 	query := `
-		SELECT id, name, schema_name, subdomain || '.' || COALESCE(domain, 'localhost:8080') as host
+		SELECT id, name, schema_name, domain
 		FROM public.tenants 
-		WHERE subdomain = $1 AND active = true`
+		WHERE domain = $1 AND active = true`
 
 	tenant := &models.TenantConfig{}
-	err := s.db.QueryRow(query, subdomain).Scan(
+	err := s.db.QueryRow(query, cleanDomain).Scan(
 		&tenant.ID, &tenant.Name, &tenant.Schema, &tenant.Host,
 	)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("tenant not found for domain: %s", cleanDomain)
 	}
 
 	return tenant, nil
+}
+
+// Domain'i normalize et
+func (s *tenantService) normalizeDomain(domain string) string {
+	// www. prefix'i kaldır
+	domain = strings.TrimPrefix(domain, "www.")
+	// https:// veya http:// kaldır
+	domain = strings.TrimPrefix(domain, "https://")
+	domain = strings.TrimPrefix(domain, "http://")
+	// Son slash'i kaldır
+	domain = strings.TrimSuffix(domain, "/")
+
+	return strings.ToLower(strings.TrimSpace(domain))
 }
 
 func (s *tenantService) CreateTenantSchema(schemaName string) error {
