@@ -1,0 +1,1183 @@
+2025/06/25 04:06:40 main.go:33: Starting server in development mode
+2025/06/25 04:06:40 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:06:40 main.go:47: Database connection successful
+2025/06/25 04:06:40 main.go:68: Server starting on port 8080
+2025/06/25 04:06:45 handlers.go:36: GLOBAL: OPTIONS /api/user/profile
+2025/06/25 04:06:45 handlers.go:36: GLOBAL: OPTIONS /api/user/profile
+2025/06/25 04:06:45 handlers.go:36: GLOBAL: OPTIONS /api/user/profile
+2025/06/25 04:06:45 handlers.go:36: GLOBAL: OPTIONS /api/user/profile
+2025/06/25 04:06:52 handlers.go:36: GLOBAL: OPTIONS /api/auth/login
+2025/06/25 04:06:55 handlers.go:36: GLOBAL: OPTIONS /api/auth/login
+2025/06/25 04:08:07 main.go:34: Starting server in development mode
+2025/06/25 04:08:07 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:08:07 main.go:48: Database connection successful
+2025/06/25 04:08:07 main.go:72: Server starting on port 8080
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: POST /api/auth/login
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: POST /api/auth/login
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing POST /api/auth/login
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for POST /api/auth/login
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for POST /api/auth/login
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:14 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:08:14 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:08:14 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:14 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:14 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:14 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:14 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:08:14 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:08:14 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:14 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:14 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:14 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:14 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:14 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:14 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:14 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:08:14 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:44 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:08:44 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:08:44 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:44 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:08:44 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:08:44 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:44 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:44 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:44 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:44 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:44 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:08:44 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:08:44 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:44 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:44 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:44 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:44 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:44 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:44 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:44 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:08:44 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:08:44 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:44 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:44 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:44 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:44 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:44 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:44 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:44 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:08:44 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:08:44 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:08:44 handlers.go:227: Host: localhost:8080
+2025/06/25 04:08:44 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:08:44 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:08:44 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:08:44 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:44 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:44 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:08:44 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:08:44 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:44 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:08:44 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:08:44 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:08:44 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:08:44 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:08:44 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:08:44 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:08:44 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:08:44 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:08:44 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:08:44 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:08:44 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:08:44 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:08:44 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:08:44 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:08:44 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:08:44 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:08:44 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:09:02 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:09:02 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:09:02 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:09:02 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:09:02 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:09:02 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:09:02 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:09:02 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:09:02 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:09:02 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:09:02 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:09:02 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:09:02 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:09:02 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:09:02 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:09:02 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:09:02 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:09:02 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:09:02 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:09:02 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:09:02 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:09:02 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:09:02 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:09:02 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:09:02 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:09:02 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:09:02 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:09:02 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:09:02 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:09:02 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:09:02 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:09:02 handlers.go:227: Host: localhost:8080
+2025/06/25 04:09:02 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:09:02 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:09:02 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:09:02 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:09:02 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:09:02 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:09:02 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:09:02 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:09:02 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:09:02 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:09:02 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:09:02 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:09:02 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:09:02 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:09:02 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:09:02 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:09:02 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:09:02 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:09:02 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:09:02 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:09:02 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:09:02 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:09:02 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:09:02 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:09:02 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:09:02 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:09:02 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:09:02 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:53 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:53 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:53 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:53 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:53 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:53 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:53 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:53 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:53 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:53 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:53 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:53 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:53 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:53 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:53 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:53 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:53 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:53 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:53 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:53 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:53 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:53 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:53 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:53 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:53 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:53 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:53 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:53 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:53 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:53 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:53 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:53 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:53 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:53 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:53 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:53 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:53 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:53 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:53 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:53 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:53 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:53 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:53 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:53 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:53 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:53 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:53 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:53 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:53 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:53 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:53 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:53 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:53 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:53 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:53 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:53 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:53 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:53 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:53 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:53 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:54 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:54 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:54 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:54 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:54 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:54 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:54 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:54 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:54 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:54 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:54 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:54 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:54 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:54 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:54 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:54 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:54 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:54 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:54 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:54 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:54 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:54 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:54 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:54 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:54 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:54 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:54 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:54 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:54 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:54 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:54 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:54 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:54 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:54 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:54 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:54 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:54 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:54 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:54 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:54 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:54 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:54 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:54 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:54 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:54 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:54 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:54 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:54 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:54 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:54 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:54 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:54 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:54 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:54 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:54 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:54 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:54 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:54 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:54 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:54 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:55 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:55 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:55 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:55 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:55 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:55 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:55 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:55 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:55 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:55 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:55 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:55 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:55 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:55 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:55 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:55 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:55 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:55 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:55 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:55 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:55 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:55 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:55 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:55 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:55 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:55 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:55 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:55 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:55 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:55 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:55 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:55 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:55 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:55 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:55 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:55 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:55 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:55 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:55 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:55 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:55 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:55 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:55 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:55 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:55 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:55 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:55 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:55 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:55 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:55 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:55 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:55 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:55 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:55 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:55 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:55 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:55 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:55 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:55 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:55 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:55 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:55 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:55 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:55 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:55 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:55 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:55 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:55 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:55 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:55 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:55 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:55 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:55 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:55 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:55 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:55 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:55 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:55 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:55 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:55 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:55 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:55 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:55 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:55 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:55 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:55 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:55 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:55 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:55 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:55 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:55 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:55 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:55 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:55 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:55 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:55 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:55 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:55 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:55 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:55 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:55 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:55 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:55 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:55 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:55 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:55 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:55 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:55 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:55 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:55 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:55 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:55 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:55 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:55 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:55 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:55 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:55 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:55 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:55 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:55 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:56 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:56 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:56 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:56 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:56 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:56 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:56 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:56 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:56 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:56 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:56 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:56 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:56 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:56 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:56 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:56 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:56 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:56 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:56 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:56 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:56 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:56 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:56 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:56 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:56 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:56 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:56 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:56 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:56 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:56 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:56 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:56 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:56 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:56 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:56 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:56 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:56 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:56 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:56 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:56 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:56 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:56 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:56 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:56 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:56 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:56 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:56 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:56 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:56 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:56 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:56 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:56 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:56 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:56 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:56 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:56 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:56 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:56 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:56 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:56 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:56 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:56 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:56 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:56 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:56 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:56 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:56 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:56 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:56 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:56 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:56 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:56 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:56 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:56 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:56 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:56 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:56 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:56 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:56 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:56 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:56 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:56 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:56 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:56 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:56 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:56 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:56 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:56 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:56 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:56 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:56 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:56 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:56 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:56 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:56 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:56 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:56 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:56 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:56 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:56 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:57 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:57 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:57 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:57 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:57 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:57 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:57 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:57 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 user_repository.go:97: UpdatePassword: Current search_path: public
+2025/06/25 04:10:57 user_repository.go:103: UpdatePassword: Error: pq: "users" nesnesi mevcut değil
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:10:57 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:10:57 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:10:57 handlers.go:227: Host: localhost:8080
+2025/06/25 04:10:57 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:10:57 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:10:57 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:10:57 user_repository.go:97: UpdatePassword: Current search_path: main, public
+2025/06/25 04:10:57 user_repository.go:108: UpdatePassword: Rows affected: 1
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:10:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:10:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:10:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:10:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:10:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:10:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:10:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:10:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:10:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:10:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:10:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:10:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:10:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:10:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:10:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:10:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:10:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:47 main.go:34: Starting server in development mode
+2025/06/25 04:12:47 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:12:48 main.go:48: Database connection successful
+2025/06/25 04:12:48 main.go:72: Server starting on port 8080
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/user/profile
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/user/profile
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/user/profile
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:12:57 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:12:57 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:12:57 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:12:57 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:12:57 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:12:57 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:12:57 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:12:57 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:12:57 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:12:57 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:12:57 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:12:57 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:12:57 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:12:57 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:12:57 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:12:57 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:12:57 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:03 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:13:03 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:13:03 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:03 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:13:03 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:13:03 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:03 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:03 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:03 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:03 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:03 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:13:03 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:13:03 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:03 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:03 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:03 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:03 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:03 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:03 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:03 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:13:03 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:13:03 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:03 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:03 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:03 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:03 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:03 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:03 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:03 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:13:03 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:13:03 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:13:03 handlers.go:227: Host: localhost:8080
+2025/06/25 04:13:03 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:13:03 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:13:03 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:13:03 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:03 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:03 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:13:03 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:13:03 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:03 user_repository.go:112: UpdatePassword: Transaction search_path: main, public
+2025/06/25 04:13:03 user_repository.go:123: UpdatePassword: Rows affected: 1
+2025/06/25 04:13:03 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:03 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:13:03 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:13:03 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:03 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:03 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:03 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:03 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:13:03 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:13:03 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:03 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:03 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:03 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:03 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:03 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:03 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:03 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:13:03 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:11 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:13:11 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:13:11 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:13:11 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:11 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:13:11 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:11 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:11 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:11 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:11 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:11 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:13:11 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:13:11 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:11 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:11 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:11 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:11 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:11 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:11 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:11 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:13:11 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:13:11 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:11 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:11 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:11 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:11 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:11 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:11 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:11 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:13:11 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:13:11 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:13:11 handlers.go:227: Host: localhost:8080
+2025/06/25 04:13:11 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:13:11 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:13:11 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:13:11 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:11 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:11 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:13:11 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:13:11 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:11 user_repository.go:112: UpdatePassword: Transaction search_path: main, public
+2025/06/25 04:13:11 user_repository.go:123: UpdatePassword: Rows affected: 1
+2025/06/25 04:13:11 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:11 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:13:11 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:13:11 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:11 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:11 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:11 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:11 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:13:11 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:13:11 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:11 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:11 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:11 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:11 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:11 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:11 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:11 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:13:11 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:27 handlers.go:36: GLOBAL: PUT /api/user/change-password
+2025/06/25 04:13:27 handlers.go:52: API_GROUP: PUT /api/user/change-password
+2025/06/25 04:13:27 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:27 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:13:27 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:13:27 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:27 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:27 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:27 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:27 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:27 handlers.go:65: TenantHandlersMiddleware: Processing PUT /api/user/change-password
+2025/06/25 04:13:27 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for PUT /api/user/change-password
+2025/06/25 04:13:27 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:27 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:27 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:27 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:27 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:27 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:27 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:27 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:13:27 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:13:27 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:27 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:27 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:27 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:27 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:27 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:27 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:27 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for PUT /api/user/change-password
+2025/06/25 04:13:27 handlers.go:225: === CHANGE PASSWORD ENDPOINT REACHED ===
+2025/06/25 04:13:27 handlers.go:226: Method: PUT, Path: /api/user/change-password
+2025/06/25 04:13:27 handlers.go:227: Host: localhost:8080
+2025/06/25 04:13:27 handlers.go:228: Origin: http://localhost:3000
+2025/06/25 04:13:27 handlers.go:230: Change password request - checking tenant_handlers
+2025/06/25 04:13:27 handlers.go:232: Change password - using tenant auth middleware
+2025/06/25 04:13:27 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:27 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:27 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:13:27 handlers.go:238: Change password - using tenant handler
+2025/06/25 04:13:27 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:27 user_repository.go:112: UpdatePassword: Transaction search_path: main, public
+2025/06/25 04:13:27 user_repository.go:123: UpdatePassword: Rows affected: 1
+2025/06/25 04:13:27 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:13:27 handlers.go:36: GLOBAL: GET /api/appointments
+2025/06/25 04:13:27 handlers.go:52: API_GROUP: GET /api/appointments
+2025/06/25 04:13:27 tenant.go:17: TenantMiddleware: Processing request for host: localhost:8080
+2025/06/25 04:13:27 tenant.go:31: TenantMiddleware: Found tenant: Default Tenant, schema: main
+2025/06/25 04:13:27 tenant.go:63: TenantMiddleware: Set search_path to main
+2025/06/25 04:13:27 tenant.go:68: TenantMiddleware: Stored tenant_schema in context: main
+2025/06/25 04:13:27 handlers.go:65: TenantHandlersMiddleware: Processing GET /api/appointments
+2025/06/25 04:13:27 handlers.go:69: TenantHandlersMiddleware: Found tenant_schema: main for GET /api/appointments
+2025/06/25 04:13:27 tenant_handlers.go:23: NewTenantHandlers: tenant_schema exists: true
+2025/06/25 04:13:27 tenant_handlers.go:31: NewTenantHandlers: Creating handlers for schema: main
+2025/06/25 04:13:27 tenant_repository.go:82: TenantRepositories: Creating repositories for schema: main
+2025/06/25 04:13:27 tenant_repository.go:17: TenantRepository: Creating tenant repo for schema: main
+2025/06/25 04:13:27 tenant_repository.go:27: TenantRepository: Forcing search_path to main
+2025/06/25 04:13:27 tenant_repository.go:36: TenantRepository: Verified search_path: main, public
+2025/06/25 04:13:27 tenant_handlers.go:42: NewTenantHandlers: Successfully created tenant handlers
+2025/06/25 04:13:27 handlers.go:74: TenantHandlersMiddleware: Successfully created tenant handlers for GET /api/appointments
+2025/06/25 04:13:27 tenant.go:73: TenantMiddleware: Reset search_path to public
+2025/06/25 04:18:59 main.go:34: Starting server in development mode
+2025/06/25 04:18:59 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:19:00 main.go:48: Database connection successful
+2025/06/25 04:19:00 main.go:72: Server starting on port 8080
+2025/06/25 04:25:02 main.go:34: Starting server in development mode
+2025/06/25 04:25:02 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:25:02 main.go:48: Database connection successful
+2025/06/25 04:25:02 main.go:72: Server starting on port 8080
+2025/06/25 04:26:40 main.go:34: Starting server in development mode
+2025/06/25 04:26:40 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:26:40 main.go:48: Database connection successful
+2025/06/25 04:26:40 main.go:72: Server starting on port 8080
+2025/06/25 04:27:24 main.go:34: Starting server in development mode
+2025/06/25 04:27:24 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:27:24 main.go:48: Database connection successful
+2025/06/25 04:27:24 main.go:72: Server starting on port 8080
+2025/06/25 04:33:05 main.go:34: Starting server in development mode
+2025/06/25 04:33:05 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:33:05 main.go:48: Database connection successful
+2025/06/25 04:33:05 main.go:72: Server starting on port 8080
+2025/06/25 04:33:05 main.go:73: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 04:33:41 main.go:34: Starting server in development mode
+2025/06/25 04:33:42 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:33:42 main.go:48: Database connection successful
+2025/06/25 04:33:42 main.go:72: Server starting on port 8080
+2025/06/25 04:37:55 main.go:34: Starting server in development mode
+2025/06/25 04:37:55 main.go:35: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:37:55 main.go:48: Database connection successful
+2025/06/25 04:37:55 main.go:72: Server starting on port 8080
+2025/06/25 04:42:06 main.go:33: Starting server in development mode
+2025/06/25 04:42:06 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:42:06 main.go:47: Database connection successful
+2025/06/25 04:42:06 main.go:70: Server starting on port 8080
+2025/06/25 04:42:43 main.go:33: Starting server in development mode
+2025/06/25 04:42:43 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:42:43 main.go:47: Database connection successful
+2025/06/25 04:42:43 main.go:70: Server starting on port 8080
+2025/06/25 04:44:54 main.go:33: Starting server in development mode
+2025/06/25 04:44:54 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:44:54 main.go:47: Database connection successful
+2025/06/25 04:44:54 main.go:70: Server starting on port 8080
+2025/06/25 04:46:16 main.go:33: Starting server in development mode
+2025/06/25 04:46:16 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:46:16 main.go:47: Database connection successful
+2025/06/25 04:46:16 main.go:70: Server starting on port 8080
+2025/06/25 04:52:06 main.go:33: Starting server in development mode
+2025/06/25 04:52:06 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:52:06 main.go:47: Database connection successful
+2025/06/25 04:52:06 main.go:70: Server starting on port 8080
+2025/06/25 04:52:17 handlers.go:32: 📥 REQUEST: POST /api/auth/login | IP: ::1
+2025/06/25 04:52:17 handlers.go:34: 📤 RESPONSE: POST /api/auth/login | Status: 200
+2025/06/25 04:58:52 main.go:33: Starting server in development mode
+2025/06/25 04:58:52 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:58:53 main.go:47: Database connection successful
+2025/06/25 04:58:53 main.go:70: Server starting on port 8080
+2025/06/25 04:59:08 main.go:33: Starting server in development mode
+2025/06/25 04:59:08 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 04:59:08 main.go:47: Database connection successful
+2025/06/25 04:59:08 main.go:70: Server starting on port 8080
+2025/06/25 04:59:08 main.go:71: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 05:01:06 main.go:33: Starting server in development mode
+2025/06/25 05:01:06 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:01:06 main.go:47: Database connection successful
+2025/06/25 05:01:06 main.go:70: Server starting on port 8080
+2025/06/25 05:02:08 main.go:33: Starting server in development mode
+2025/06/25 05:02:08 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:02:08 main.go:47: Database connection successful
+2025/06/25 05:02:08 main.go:70: Server starting on port 8080
+2025/06/25 05:04:02 main.go:33: Starting server in development mode
+2025/06/25 05:04:02 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:04:02 main.go:47: Database connection successful
+2025/06/25 05:04:02 main.go:70: Server starting on port 8080
+2025/06/25 05:04:02 main.go:71: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 05:04:20 main.go:33: Starting server in development mode
+2025/06/25 05:04:20 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:04:20 main.go:47: Database connection successful
+2025/06/25 05:04:20 main.go:70: Server starting on port 8080
+2025/06/25 05:04:20 main.go:71: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 05:04:27 main.go:33: Starting server in development mode
+2025/06/25 05:04:27 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:04:27 main.go:47: Database connection successful
+2025/06/25 05:04:27 main.go:70: Server starting on port 8080
+2025/06/25 05:09:41 main.go:33: Starting server in development mode
+2025/06/25 05:09:41 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:09:41 main.go:47: Database connection successful
+2025/06/25 05:09:41 main.go:70: Server starting on port 8080
+2025/06/25 05:11:37 main.go:33: Starting server in development mode
+2025/06/25 05:11:37 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:11:37 main.go:47: Database connection successful
+2025/06/25 05:11:37 main.go:70: Server starting on port 8080
+2025/06/25 05:13:56 main.go:33: Starting server in development mode
+2025/06/25 05:13:56 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:13:56 main.go:47: Database connection successful
+2025/06/25 05:13:56 main.go:70: Server starting on port 8080
+2025/06/25 05:17:11 main.go:33: Starting server in development mode
+2025/06/25 05:17:12 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:17:12 main.go:47: Database connection successful
+2025/06/25 05:17:12 main.go:81: Server starting on port 8080
+2025/06/25 05:17:12 main.go:82: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 05:17:37 main.go:33: Starting server in development mode
+2025/06/25 05:17:37 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:17:37 main.go:47: Database connection successful
+2025/06/25 05:17:37 main.go:81: Server starting on port 8080
+2025/06/25 05:24:23 main.go:33: Starting server in development mode
+2025/06/25 05:24:23 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:24:23 main.go:47: Database connection successful
+2025/06/25 05:24:23 main.go:78: Server starting on port 8080
+2025/06/25 05:24:23 main.go:79: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 05:25:03 main.go:33: Starting server in development mode
+2025/06/25 05:25:03 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:25:03 main.go:47: Database connection successful
+2025/06/25 05:25:03 main.go:78: Server starting on port 8080
+2025/06/25 05:28:20 main.go:33: Starting server in development mode
+2025/06/25 05:28:20 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:28:20 main.go:47: Database connection successful
+2025/06/25 05:28:20 main.go:78: Server starting on port 8080
+2025/06/25 05:29:56 main.go:33: Starting server in development mode
+2025/06/25 05:29:56 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:29:56 main.go:47: Database connection successful
+2025/06/25 05:29:56 main.go:78: Server starting on port 8080
+2025/06/25 05:36:32 main.go:33: Starting server in development mode
+2025/06/25 05:36:32 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:36:32 main.go:47: Database connection successful
+2025/06/25 05:36:32 main.go:78: Server starting on port 8080
+2025/06/25 05:41:44 main.go:33: Starting server in development mode
+2025/06/25 05:41:45 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:41:45 main.go:47: Database connection successful
+2025/06/25 05:41:45 main.go:78: Server starting on port 8080
+2025/06/25 05:44:43 main.go:33: Starting server in development mode
+2025/06/25 05:44:43 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:44:43 main.go:47: Database connection successful
+2025/06/25 05:44:43 main.go:78: Server starting on port 8080
+2025/06/25 05:45:46 main.go:33: Starting server in development mode
+2025/06/25 05:45:46 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:45:46 main.go:47: Database connection successful
+2025/06/25 05:45:46 main.go:78: Server starting on port 8080
+2025/06/25 05:45:46 main.go:79: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2025/06/25 05:46:22 main.go:33: Starting server in development mode
+2025/06/25 05:46:22 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:46:22 main.go:47: Database connection successful
+2025/06/25 05:46:22 main.go:78: Server starting on port 8080
+2025/06/25 05:47:12 main.go:33: Starting server in development mode
+2025/06/25 05:47:12 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:47:12 main.go:47: Database connection successful
+2025/06/25 05:47:12 main.go:78: Server starting on port 8080
+2025/06/25 05:47:43 main.go:33: Starting server in development mode
+2025/06/25 05:47:43 main.go:34: Database: postgres@localhost:5432/appointment_db
+2025/06/25 05:47:43 main.go:47: Database connection successful
+2025/06/25 05:47:43 main.go:78: Server starting on port 8080
