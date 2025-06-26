@@ -5,12 +5,14 @@ import (
 	"context"
 	"fmt"
 	"mime/multipart"
+	"os"
 	"path/filepath"
 	"strings"
 	"time"
 
-	"github.com/cloudinary/cloudinary-go"
-	"github.com/cloudinary/cloudinary-go/api/uploader"
+	"github.com/cloudinary/cloudinary-go/v2"
+	"github.com/cloudinary/cloudinary-go/v2/api"
+	"github.com/cloudinary/cloudinary-go/v2/api/uploader"
 )
 
 type UploadService interface {
@@ -33,12 +35,11 @@ type uploadService struct {
 }
 
 func NewUploadService(cfg *config.Config) (UploadService, error) {
-	// Initialize Cloudinary
-	cld, err := cloudinary.NewFromParams(cfg.Cloudinary.CloudName, cfg.Cloudinary.APIKey, cfg.Cloudinary.APISecret)
+	// 2.x: Bağlantı için CLOUDINARY_URL kullan
+	cld, err := cloudinary.NewFromURL(os.Getenv("CLOUDINARY_URL"))
 	if err != nil {
 		return nil, fmt.Errorf("failed to initialize Cloudinary: %v", err)
 	}
-
 	return &uploadService{
 		cloudinary: cld,
 	}, nil
@@ -56,7 +57,6 @@ func (s *uploadService) UploadImage(file multipart.File, filename string, folder
 		".gif":  true,
 		".webp": true,
 	}
-
 	if !allowedExts[ext] {
 		return nil, fmt.Errorf("unsupported file format: %s", ext)
 	}
@@ -66,13 +66,11 @@ func (s *uploadService) UploadImage(file multipart.File, filename string, folder
 		strings.TrimSuffix(filename, filepath.Ext(filename)),
 		time.Now().Unix())
 
-	// Upload to Cloudinary
 	uploadParams := uploader.UploadParams{
 		PublicID:     publicID,
 		Folder:       folder,
 		ResourceType: "image",
-		Format:       "auto", // Auto-optimize format
-		Overwrite:    true,
+		Overwrite:    api.Bool(true),
 	}
 
 	uploadResult, err := s.cloudinary.Upload.Upload(ctx, file, uploadParams)
@@ -80,7 +78,6 @@ func (s *uploadService) UploadImage(file multipart.File, filename string, folder
 		return nil, fmt.Errorf("failed to upload to Cloudinary: %v", err)
 	}
 
-	// Return structured result
 	result := &UploadResult{
 		PublicID:  uploadResult.PublicID,
 		URL:       uploadResult.URL,
@@ -96,21 +93,16 @@ func (s *uploadService) UploadImage(file multipart.File, filename string, folder
 
 func (s *uploadService) DeleteImage(publicID string) error {
 	ctx := context.Background()
-
 	if publicID == "" {
 		return fmt.Errorf("public ID is required")
 	}
-
-	// Delete from Cloudinary
 	deleteParams := uploader.DestroyParams{
 		PublicID:     publicID,
 		ResourceType: "image",
 	}
-
 	_, err := s.cloudinary.Upload.Destroy(ctx, deleteParams)
 	if err != nil {
 		return fmt.Errorf("failed to delete from Cloudinary: %v", err)
 	}
-
 	return nil
 }
