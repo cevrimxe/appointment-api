@@ -195,6 +195,64 @@ DELETE /admin/services/{id}
 
 ---
 
+## 📤 Image Upload
+
+### Upload Service Image
+```http
+POST /admin/upload/service-image
+Authorization: Bearer <admin_token>
+Content-Type: multipart/form-data
+
+Form Data:
+- image: (file) - Image file (max 5MB, formats: jpg, jpeg, png, gif, webp)
+
+Response:
+{
+  "success": true,
+  "data": {
+    "public_id": "services/service_image_1640995200",
+    "url": "http://res.cloudinary.com/your-cloud/image/upload/v1640995200/services/service_image_1640995200.jpg",
+    "secure_url": "https://res.cloudinary.com/your-cloud/image/upload/v1640995200/services/service_image_1640995200.jpg",
+    "format": "jpg",
+    "width": 800,
+    "height": 600,
+    "bytes": 154832
+  },
+  "message": "Image uploaded successfully"
+}
+```
+
+### Delete Service Image
+```http
+DELETE /admin/upload/service-image
+Authorization: Bearer <admin_token>
+Content-Type: application/json
+
+{
+  "public_id": "services/service_image_1640995200"
+}
+
+Response:
+{
+  "success": true,
+  "message": "Image deleted successfully"
+}
+```
+
+**Usage Flow:**
+1. Admin, hizmet oluştururken/güncellerken önce resmi upload eder
+2. Upload başarılı olursa `secure_url` alır
+3. Bu URL'i service'in `image_url` alanında kullanır
+4. Hizmet silindiğinde/resim değiştirildiğinde eski resmi delete endpoint'i ile siler
+
+**Image Requirements:**
+- Max file size: 5MB
+- Supported formats: JPG, JPEG, PNG, GIF, WEBP
+- Images are automatically optimized by Cloudinary
+- All images are stored in `services/` folder
+
+---
+
 ## 👥 Users
 
 ### List Users (Pagination)

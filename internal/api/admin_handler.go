@@ -5,9 +5,11 @@ import (
 	"appointment-api/internal/services"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 )
 
 type AdminHandler struct {
@@ -21,6 +23,8 @@ type AdminHandler struct {
 	appointmentService services.AppointmentService
 	paymentService     services.PaymentService
 	contactService     services.ContactService
+	uploadService      services.UploadService
+	validator          *validator.Validate
 }
 
 func NewAdminHandler(
@@ -34,6 +38,8 @@ func NewAdminHandler(
 	appointmentService services.AppointmentService,
 	paymentService services.PaymentService,
 	contactService services.ContactService,
+	uploadService services.UploadService,
+	validator *validator.Validate,
 ) *AdminHandler {
 	return &AdminHandler{
 		categoryService:    categoryService,
@@ -46,6 +52,8 @@ func NewAdminHandler(
 		appointmentService: appointmentService,
 		paymentService:     paymentService,
 		contactService:     contactService,
+		uploadService:      uploadService,
+		validator:          validator,
 	}
 }
 
@@ -1477,5 +1485,100 @@ func (h *AdminHandler) GetDashboardStats(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
 		"data":    stats,
+	})
+}
+
+// Image Upload endpoints
+func (h *AdminHandler) UploadServiceImage(c *gin.Context) {
+	// Check if upload service is available
+	if h.uploadService == nil {
+		c.JSON(http.StatusServiceUnavailable, gin.H{
+			"success": false,
+			"error":   "Upload service not available. Please configure Cloudinary credentials.",
+		})
+		return
+	}
+
+	// Get file from form
+	file, header, err := c.Request.FormFile("image")
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"error":   "No image file provided",
+		})
+		return
+	}
+	defer file.Close()
+
+	// Validate file size (max 5MB)
+	if header.Size > 5*1024*1024 {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"error":   "Image file too large. Maximum size is 5MB.",
+		})
+		return
+	}
+
+	// Upload to Cloudinary
+	result, err := h.uploadService.UploadImage(file, header.Filename, "services")
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to upload image: " + err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"data":    result,
+		"message": "Image uploaded successfully",
+	})
+}
+
+func (h *AdminHandler) DeleteServiceImage(c *gin.Context) {
+	// Check if upload service is available
+	if h.uploadService == nil {
+		c.JSON(http.StatusServiceUnavailable, gin.H{
+			"success": false,
+			"error":   "Upload service not available",
+		})
+		return
+	}
+
+	var request struct {
+		PublicID string `json:"public_id" binding:"required"`
+	}
+
+	if err := c.ShouldBindJSON(&request); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"error":   "Invalid request format",
+		})
+		return
+	}
+
+	// Validate public_id format (must be from services folder)
+	if !strings.HasPrefix(request.PublicID, "services/") {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"error":   "Invalid public ID format",
+		})
+		return
+	}
+
+	// Delete from Cloudinary
+	err := h.uploadService.DeleteImage(request.PublicID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to delete image: " + err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"message": "Image deleted successfully",
 	})
 }

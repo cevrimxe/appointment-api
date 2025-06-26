@@ -8,6 +8,7 @@ import (
 	"appointment-api/internal/services"
 	"context"
 	"database/sql"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -23,11 +24,15 @@ func main() {
 	// Load configuration (includes environment loading)
 	cfg := config.Load()
 
-	log.Printf("Starting server in %s mode", cfg.App.Environment)
-	log.Printf("Database: %s@%s:%s/%s", cfg.Database.User, cfg.Database.Host, cfg.Database.Port, cfg.Database.Name)
+	log.Printf("Starting server in development mode")
+	log.Printf("Database: %s@%s:%d/%s", cfg.Database.User, cfg.Database.Host, cfg.Database.Port, cfg.Database.DBName)
+
+	// Build database URL
+	dbURL := fmt.Sprintf("postgres://%s:%s@%s:%d/%s?sslmode=%s",
+		cfg.Database.User, cfg.Database.Password, cfg.Database.Host, cfg.Database.Port, cfg.Database.DBName, cfg.Database.SSLMode)
 
 	// Database connection
-	db, err := sql.Open("postgres", cfg.Database.URL)
+	db, err := sql.Open("postgres", dbURL)
 	if err != nil {
 		log.Fatal("Failed to connect to database:", err)
 	}
@@ -54,9 +59,7 @@ func main() {
 	handlers := api.NewHandlers(svc)
 
 	// Setup router
-	if cfg.App.Environment == "production" {
-		gin.SetMode(gin.ReleaseMode)
-	}
+	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 
 	// Add CORS middleware

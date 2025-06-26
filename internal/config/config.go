@@ -1,28 +1,27 @@
 package config
 
 import (
-	"fmt"
 	"log"
 	"os"
+	"strconv"
 
 	"github.com/joho/godotenv"
 )
 
 type Config struct {
-	Database DatabaseConfig
-	Server   ServerConfig
-	JWT      JWTConfig
-	App      AppConfig
+	Database   DatabaseConfig
+	JWT        JWTConfig
+	Server     ServerConfig
+	Cloudinary CloudinaryConfig
 }
 
 type DatabaseConfig struct {
 	Host     string
-	Port     string
+	Port     int
 	User     string
 	Password string
-	Name     string
+	DBName   string
 	SSLMode  string
-	URL      string
 }
 
 type ServerConfig struct {
@@ -33,9 +32,10 @@ type JWTConfig struct {
 	Secret string
 }
 
-type AppConfig struct {
-	Environment string
-	Debug       bool
+type CloudinaryConfig struct {
+	CloudName string
+	APIKey    string
+	APISecret string
 }
 
 func Load() *Config {
@@ -44,18 +44,19 @@ func Load() *Config {
 		log.Println("No config.env file found, using environment variables")
 	}
 
-	dbConfig := DatabaseConfig{
-		Host:     getEnv("DB_HOST", "localhost"),
-		Port:     getEnv("DB_PORT", "5432"),
-		User:     getEnv("DB_USER", "postgres"),
-		Password: getEnv("DB_PASSWORD", "password"),
-		Name:     getEnv("DB_NAME", "appointment_db"),
-		SSLMode:  getEnv("DB_SSLMODE", "disable"),
+	port, err := strconv.Atoi(getEnv("DB_PORT", "5432"))
+	if err != nil {
+		log.Fatalf("Invalid DB_PORT: %v", err)
 	}
 
-	// Build database URL
-	dbConfig.URL = fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=%s",
-		dbConfig.User, dbConfig.Password, dbConfig.Host, dbConfig.Port, dbConfig.Name, dbConfig.SSLMode)
+	dbConfig := DatabaseConfig{
+		Host:     getEnv("DB_HOST", "localhost"),
+		Port:     port,
+		User:     getEnv("DB_USER", "postgres"),
+		Password: getEnv("DB_PASSWORD", ""),
+		DBName:   getEnv("DB_NAME", "appointment_db"),
+		SSLMode:  getEnv("DB_SSLMODE", "disable"),
+	}
 
 	return &Config{
 		Database: dbConfig,
@@ -65,9 +66,10 @@ func Load() *Config {
 		JWT: JWTConfig{
 			Secret: getEnv("JWT_SECRET", "your-secret-key"),
 		},
-		App: AppConfig{
-			Environment: getEnv("APP_ENV", "development"),
-			Debug:       getEnv("APP_DEBUG", "false") == "true",
+		Cloudinary: CloudinaryConfig{
+			CloudName: getEnv("CLOUDINARY_CLOUD_NAME", ""),
+			APIKey:    getEnv("CLOUDINARY_API_KEY", ""),
+			APISecret: getEnv("CLOUDINARY_API_SECRET", ""),
 		},
 	}
 }

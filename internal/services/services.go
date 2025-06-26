@@ -4,6 +4,7 @@ import (
 	"appointment-api/internal/config"
 	"appointment-api/internal/repository"
 	"database/sql"
+	"log"
 	"time"
 )
 
@@ -20,6 +21,7 @@ type Services struct {
 	Appointment AppointmentService
 	Payment     PaymentService
 	Contact     ContactService
+	Upload      UploadService
 }
 
 func NewServices(repos *repository.Repositories, cfg *config.Config, mainDB *sql.DB) *Services {
@@ -28,6 +30,13 @@ func NewServices(repos *repository.Repositories, cfg *config.Config, mainDB *sql
 
 	// Create tenant cache with 5 minute refresh interval
 	tenantCache := NewTenantCache(mainDB, 5*time.Minute)
+
+	// Create upload service
+	uploadService, err := NewUploadService(cfg)
+	if err != nil {
+		log.Printf("Warning: Failed to initialize upload service: %v", err)
+		// Continue without upload service - will be nil
+	}
 
 	return &Services{
 		Auth:        NewAuthService(globalUserRepo, cfg),
@@ -42,5 +51,6 @@ func NewServices(repos *repository.Repositories, cfg *config.Config, mainDB *sql
 		Appointment: NewAppointmentService(repos.Appointment, repos.Service, repos.Specialist),
 		Payment:     NewPaymentService(repos.Payment, repos.Appointment),
 		Contact:     NewContactService(repos.Contact),
+		Upload:      uploadService,
 	}
 }

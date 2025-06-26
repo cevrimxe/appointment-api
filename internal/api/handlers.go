@@ -21,7 +21,7 @@ func NewHandlers(svc *services.Services) *Handlers {
 	return &Handlers{
 		Auth:   NewAuthHandler(svc.Auth),
 		Public: NewPublicHandler(svc.Category, svc.Service, svc.Specialist, svc.Appointment, svc.Payment, svc.Contact, validate),
-		Admin:  NewAdminHandler(svc.Category, svc.Service, svc.Device, svc.Settings, svc.Auth, svc.User, svc.Specialist, svc.Appointment, svc.Payment, svc.Contact),
+		Admin:  NewAdminHandler(svc.Category, svc.Service, svc.Device, svc.Settings, svc.Auth, svc.User, svc.Specialist, svc.Appointment, svc.Payment, svc.Contact, svc.Upload, validate),
 	}
 }
 
@@ -167,6 +167,13 @@ func SetupRoutes(router *gin.Engine, handlers *Handlers, svc *services.Services,
 				adminServices.GET("", handlers.Admin.GetServices)
 				adminServices.PUT("/:id", handlers.Admin.UpdateService)
 				adminServices.DELETE("/:id", handlers.Admin.DeleteService)
+			}
+
+			// Image Upload for Services
+			adminUpload := admin.Group("/upload")
+			{
+				adminUpload.POST("/service-image", handlers.Admin.UploadServiceImage)
+				adminUpload.DELETE("/service-image", handlers.Admin.DeleteServiceImage)
 			}
 
 			// Devices CRUD
