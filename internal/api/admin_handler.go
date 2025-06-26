@@ -502,8 +502,18 @@ func (h *AdminHandler) GetUsers(c *gin.Context) {
 }
 
 func (h *AdminHandler) CreateUser(c *gin.Context) {
-	var user models.User
-	if err := c.ShouldBindJSON(&user); err != nil {
+	var request struct {
+		Email     string          `json:"email" binding:"required,email"`
+		Name      string          `json:"name" binding:"required"`
+		Phone     string          `json:"phone"`
+		Role      models.UserRole `json:"role"`
+		BirthDate *time.Time      `json:"birth_date"`
+		UstBel    *float64        `json:"ust_bel"`
+		OrtaBel   *float64        `json:"orta_bel"`
+		AltBel    *float64        `json:"alt_bel"`
+	}
+
+	if err := c.ShouldBindJSON(&request); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"success": false,
 			"error":   "Invalid request format",
@@ -511,7 +521,19 @@ func (h *AdminHandler) CreateUser(c *gin.Context) {
 		return
 	}
 
-	err := h.userService.Create(&user)
+	user := &models.User{
+		Email:     request.Email,
+		Password:  "123456", // Default password
+		Name:      request.Name,
+		Phone:     request.Phone,
+		Role:      request.Role,
+		BirthDate: request.BirthDate,
+		UstBel:    request.UstBel,
+		OrtaBel:   request.OrtaBel,
+		AltBel:    request.AltBel,
+	}
+
+	err := h.userService.Create(user)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"success": false,
@@ -520,7 +542,6 @@ func (h *AdminHandler) CreateUser(c *gin.Context) {
 		return
 	}
 
-	// Clear password from response
 	user.Password = ""
 
 	c.JSON(http.StatusCreated, gin.H{
