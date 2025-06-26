@@ -135,7 +135,20 @@ func (s *paymentService) Delete(id int) error {
 		return fmt.Errorf("cannot delete completed payment")
 	}
 
-	return s.paymentRepo.Delete(id)
+	// Delete payment first
+	err = s.paymentRepo.Delete(id)
+	if err != nil {
+		return err
+	}
+
+	// Update appointment payment status to pending after payment deletion
+	err = s.appointmentRepo.UpdatePaymentStatus(existing.AppointmentID, models.PaymentPending)
+	if err != nil {
+		// Log error but don't fail the payment deletion since it's already deleted
+		fmt.Printf("Warning: failed to update appointment payment status after payment deletion: %v\n", err)
+	}
+
+	return nil
 }
 
 func (s *paymentService) ProcessPayment(appointmentID int, paymentMethod models.PaymentMethod, deviceID *int) (*models.Payment, error) {
