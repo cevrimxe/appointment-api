@@ -39,7 +39,22 @@ func NewPaymentService(paymentRepo repository.PaymentRepository, appointmentRepo
 }
 
 func (s *paymentService) Create(payment *models.Payment) error {
-	return s.paymentRepo.Create(payment)
+	// Create the payment first
+	err := s.paymentRepo.Create(payment)
+	if err != nil {
+		return err
+	}
+
+	// If payment is completed, update appointment payment status
+	if payment.Status == models.PaymentCompleted {
+		err = s.appointmentRepo.UpdatePaymentStatus(payment.AppointmentID, models.PaymentCompleted)
+		if err != nil {
+			// Log error but don't fail the payment creation
+			fmt.Printf("Warning: failed to update appointment payment status: %v\n", err)
+		}
+	}
+
+	return nil
 }
 
 func (s *paymentService) GetByID(id int) (*models.Payment, error) {
@@ -87,7 +102,22 @@ func (s *paymentService) Update(payment *models.Payment) error {
 		return fmt.Errorf("payment not found")
 	}
 
-	return s.paymentRepo.Update(payment)
+	// Update payment
+	err = s.paymentRepo.Update(payment)
+	if err != nil {
+		return err
+	}
+
+	// If status changed, update appointment payment status too
+	if existing.Status != payment.Status {
+		err = s.appointmentRepo.UpdatePaymentStatus(payment.AppointmentID, payment.Status)
+		if err != nil {
+			// Log error but don't fail the payment update
+			fmt.Printf("Warning: failed to update appointment payment status: %v\n", err)
+		}
+	}
+
+	return nil
 }
 
 func (s *paymentService) Delete(id int) error {
