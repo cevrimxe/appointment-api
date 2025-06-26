@@ -36,8 +36,17 @@ func SetupRoutes(router *gin.Engine, handlers *Handlers, svc *services.Services,
 		})
 	})
 
+	// Cache stats endpoint (for monitoring)
+	router.GET("/cache/stats", func(c *gin.Context) {
+		count, domains := svc.TenantCache.GetCacheStats()
+		c.JSON(200, gin.H{
+			"tenant_count": count,
+			"domains":      domains,
+		})
+	})
+
 	api := router.Group("/api")
-	api.Use(middleware.TenantMiddleware(svc.Tenant, mainDB))
+	api.Use(middleware.TenantMiddleware(svc.Tenant, svc.TenantCache, mainDB))
 	// Simple tenant context middleware
 	api.Use(func(c *gin.Context) {
 		c.Next()

@@ -4,11 +4,13 @@ import (
 	"appointment-api/internal/config"
 	"appointment-api/internal/repository"
 	"database/sql"
+	"time"
 )
 
 type Services struct {
 	Auth        AuthService
 	Tenant      TenantService
+	TenantCache TenantCacheService
 	Category    CategoryService
 	Service     ServiceService
 	Device      DeviceService
@@ -24,9 +26,13 @@ func NewServices(repos *repository.Repositories, cfg *config.Config, mainDB *sql
 	// Create a global user repository for auth (uses main schema)
 	globalUserRepo := repository.NewUserRepository(mainDB)
 
+	// Create tenant cache with 5 minute refresh interval
+	tenantCache := NewTenantCache(mainDB, 5*time.Minute)
+
 	return &Services{
 		Auth:        NewAuthService(globalUserRepo, cfg),
 		Tenant:      NewTenantService(mainDB),
+		TenantCache: tenantCache,
 		Category:    NewCategoryService(repos.Category),
 		Service:     NewServiceService(repos.Service, repos.Category),
 		Device:      NewDeviceService(repos.Device),

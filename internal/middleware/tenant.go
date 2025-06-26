@@ -11,7 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func TenantMiddleware(tenantService services.TenantService, mainDB *sql.DB) gin.HandlerFunc {
+func TenantMiddleware(tenantService services.TenantService, tenantCache services.TenantCacheService, mainDB *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		// Domain'i al - Origin header'dan önce Host'tan
 		domain := getDomainFromRequest(c)
@@ -29,8 +29,8 @@ func TenantMiddleware(tenantService services.TenantService, mainDB *sql.DB) gin.
 			return
 		}
 
-		// Tenant'ı domain'e göre al
-		tenant, err := tenantService.GetTenantByDomain(domain)
+		// Tenant'ı cache'ten al (O(1) erişim!)
+		tenantInfo, err := tenantCache.GetTenantByDomain(domain)
 		if err != nil {
 			c.JSON(http.StatusNotFound, gin.H{
 				"success": false,
@@ -39,6 +39,9 @@ func TenantMiddleware(tenantService services.TenantService, mainDB *sql.DB) gin.
 			c.Abort()
 			return
 		}
+
+		// TenantInfo'yu TenantConfig'e çevir
+		tenant := tenantInfo.ConvertToTenantConfig()
 
 		// Schema'nın var olup olmadığını kontrol et, yoksa oluştur
 		var schemaExists bool
