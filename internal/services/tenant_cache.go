@@ -176,7 +176,7 @@ func (tc *TenantCache) fetchTenantFromDB(domain string) (*TenantInfo, error) {
 	query := `
 		SELECT id, name, domain, schema_name 
 		FROM public.tenants 
-		WHERE domain = $1 AND is_active = true`
+		WHERE domain = $1 AND active = true`
 
 	var tenant TenantInfo
 	err := tc.db.QueryRow(query, domain).Scan(
@@ -201,7 +201,7 @@ func (tc *TenantCache) fetchAllTenantsFromDB() ([]*TenantInfo, error) {
 	query := `
 		SELECT id, name, domain, schema_name 
 		FROM public.tenants 
-		WHERE is_active = true 
+		WHERE active = true 
 		ORDER BY domain`
 
 	rows, err := tc.db.Query(query)
