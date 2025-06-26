@@ -302,6 +302,14 @@ func (s *specialistService) GetAvailableSlots(specialistID int, date string) ([]
 
 	// Remove booked slots
 	availableSlots := []string{}
+	bookedSlots := make(map[string]bool)
+	for _, app := range existingAppointments {
+		// Only consider non-cancelled appointments as booked
+		if app.Status != models.StatusCancelled {
+			bookedSlots[app.AppointmentTime.Format("15:04")] = true
+		}
+	}
+
 	for _, slot := range slots {
 		isBooked := false
 		for _, appointment := range existingAppointments {
