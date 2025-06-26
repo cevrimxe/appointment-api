@@ -18,6 +18,10 @@ type AppointmentService interface {
 	UpdateStatus(id int, status models.AppointmentStatus) error
 	CreateFromRequest(req *models.CreateAppointmentRequest, userID int) (*models.Appointment, error)
 	UpdatePaymentStatus(appointmentID int, status models.PaymentStatus) error
+	GetTodayCount() (int, error)
+	GetMonthlyCount() (int, error)
+	GetPreviousTodayCount() (int, error)
+	GetPreviousMonthlyCount() (int, error)
 }
 
 type appointmentService struct {
@@ -260,4 +264,77 @@ func (s *appointmentService) Delete(id int) error {
 
 func (s *appointmentService) UpdatePaymentStatus(appointmentID int, status models.PaymentStatus) error {
 	return s.appointmentRepo.UpdatePaymentStatus(appointmentID, status)
+}
+
+func (s *appointmentService) GetTodayCount() (int, error) {
+	// Use List method with large limit to get all appointments and filter by today
+	appointments, _, err := s.appointmentRepo.List(10000, 0)
+	if err != nil {
+		return 0, err
+	}
+
+	today := time.Now().Format("2006-01-02")
+	count := 0
+	for _, appointment := range appointments {
+		appointmentDate := appointment.AppointmentDate.Format("2006-01-02")
+		if appointmentDate == today {
+			count++
+		}
+	}
+	return count, nil
+}
+
+func (s *appointmentService) GetMonthlyCount() (int, error) {
+	// Use List method to get all appointments and filter by this month
+	appointments, _, err := s.appointmentRepo.List(10000, 0)
+	if err != nil {
+		return 0, err
+	}
+
+	now := time.Now()
+	currentMonth := now.Month()
+	currentYear := now.Year()
+	count := 0
+	for _, appointment := range appointments {
+		if appointment.AppointmentDate.Month() == currentMonth && appointment.AppointmentDate.Year() == currentYear {
+			count++
+		}
+	}
+	return count, nil
+}
+
+func (s *appointmentService) GetPreviousTodayCount() (int, error) {
+	// Use List method to get all appointments and filter by yesterday
+	appointments, _, err := s.appointmentRepo.List(10000, 0)
+	if err != nil {
+		return 0, err
+	}
+
+	yesterday := time.Now().AddDate(0, 0, -1).Format("2006-01-02")
+	count := 0
+	for _, appointment := range appointments {
+		appointmentDate := appointment.AppointmentDate.Format("2006-01-02")
+		if appointmentDate == yesterday {
+			count++
+		}
+	}
+	return count, nil
+}
+
+func (s *appointmentService) GetPreviousMonthlyCount() (int, error) {
+	// Use List method to get all appointments and filter by previous month
+	appointments, _, err := s.appointmentRepo.List(10000, 0)
+	if err != nil {
+		return 0, err
+	}
+
+	now := time.Now()
+	prevMonth := now.AddDate(0, -1, 0)
+	count := 0
+	for _, appointment := range appointments {
+		if appointment.AppointmentDate.Month() == prevMonth.Month() && appointment.AppointmentDate.Year() == prevMonth.Year() {
+			count++
+		}
+	}
+	return count, nil
 }

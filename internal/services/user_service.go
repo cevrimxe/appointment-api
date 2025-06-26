@@ -4,6 +4,7 @@ import (
 	"appointment-api/internal/models"
 	"appointment-api/internal/repository"
 	"errors"
+	"time"
 
 	"golang.org/x/crypto/bcrypt"
 )
@@ -15,6 +16,8 @@ type UserService interface {
 	Update(user *models.User) error
 	Delete(id int) error
 	UpdateRole(userID int, role models.UserRole) error
+	GetTotalCount() (int, error)
+	GetNewMonthlyCount() (int, error)
 }
 
 type userService struct {
@@ -164,4 +167,29 @@ func (s *userService) UpdateRole(userID int, role models.UserRole) error {
 
 	user.Role = role
 	return s.userRepo.Update(user)
+}
+
+func (s *userService) GetTotalCount() (int, error) {
+	// Use List method to get total count
+	_, total, err := s.userRepo.List(1, 0) // Just get 1 record to get total count
+	return total, err
+}
+
+func (s *userService) GetNewMonthlyCount() (int, error) {
+	// Get all users and filter by this month's creation date
+	users, _, err := s.userRepo.List(10000, 0) // Get all users
+	if err != nil {
+		return 0, err
+	}
+
+	now := time.Now()
+	currentMonth := now.Month()
+	currentYear := now.Year()
+	count := 0
+	for _, user := range users {
+		if user.CreatedAt.Month() == currentMonth && user.CreatedAt.Year() == currentYear {
+			count++
+		}
+	}
+	return count, nil
 }

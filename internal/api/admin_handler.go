@@ -1320,7 +1320,7 @@ func (h *AdminHandler) GetAppointmentReports(c *gin.Context) {
 	})
 }
 
-// Dashboard Stats
+// Dashboard Stats - Legacy (Simple)
 func (h *AdminHandler) GetStats(c *gin.Context) {
 	// Demo stats - gerçek veriler için servis methodları gerekli
 	stats := gin.H{
@@ -1328,6 +1328,150 @@ func (h *AdminHandler) GetStats(c *gin.Context) {
 		"total_revenue":        45000.50,
 		"total_users":          156,
 		"pending_appointments": 8,
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"data":    stats,
+	})
+}
+
+// Dashboard Stats - Comprehensive (New)
+func (h *AdminHandler) GetDashboardStats(c *gin.Context) {
+	// Revenue data
+	monthlyRevenue, err := h.paymentService.GetMonthlyRevenue()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get monthly revenue: " + err.Error(),
+		})
+		return
+	}
+
+	yearlyRevenue, err := h.paymentService.GetYearlyRevenue()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get yearly revenue: " + err.Error(),
+		})
+		return
+	}
+
+	prevMonthlyRevenue, err := h.paymentService.GetPreviousMonthlyRevenue()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get previous monthly revenue: " + err.Error(),
+		})
+		return
+	}
+
+	prevYearlyRevenue, err := h.paymentService.GetPreviousYearlyRevenue()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get previous yearly revenue: " + err.Error(),
+		})
+		return
+	}
+
+	// Appointment data
+	todayAppointments, err := h.appointmentService.GetTodayCount()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get today appointments: " + err.Error(),
+		})
+		return
+	}
+
+	monthlyAppointments, err := h.appointmentService.GetMonthlyCount()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get monthly appointments: " + err.Error(),
+		})
+		return
+	}
+
+	prevTodayAppointments, err := h.appointmentService.GetPreviousTodayCount()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get previous day appointments: " + err.Error(),
+		})
+		return
+	}
+
+	prevMonthlyAppointments, err := h.appointmentService.GetPreviousMonthlyCount()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get previous monthly appointments: " + err.Error(),
+		})
+		return
+	}
+
+	// Customer data
+	totalCustomers, err := h.userService.GetTotalCount()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get total customers: " + err.Error(),
+		})
+		return
+	}
+
+	newMonthlyCustomers, err := h.userService.GetNewMonthlyCount()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"success": false,
+			"error":   "Failed to get new monthly customers: " + err.Error(),
+		})
+		return
+	}
+
+	// Calculate growth percentages
+	var revenueMonthlyGrowth float64
+	if prevMonthlyRevenue > 0 {
+		revenueMonthlyGrowth = ((monthlyRevenue - prevMonthlyRevenue) / prevMonthlyRevenue) * 100
+	}
+
+	var revenueYearlyGrowth float64
+	if prevYearlyRevenue > 0 {
+		revenueYearlyGrowth = ((yearlyRevenue - prevYearlyRevenue) / prevYearlyRevenue) * 100
+	}
+
+	var appointmentsTodayGrowth int = todayAppointments - prevTodayAppointments
+	var appointmentsMonthlyGrowth int = monthlyAppointments - prevMonthlyAppointments
+
+	// Calculate customer growth (assuming simple growth based on monthly new customers)
+	var customersGrowth float64
+	if totalCustomers > newMonthlyCustomers && totalCustomers > 0 {
+		customersGrowth = (float64(newMonthlyCustomers) / float64(totalCustomers-newMonthlyCustomers)) * 100
+	}
+
+	// Prepare response data
+	stats := gin.H{
+		"revenue": gin.H{
+			"monthly": monthlyRevenue,
+			"yearly":  yearlyRevenue,
+		},
+		"appointments": gin.H{
+			"today":   todayAppointments,
+			"monthly": monthlyAppointments,
+		},
+		"customers": gin.H{
+			"total":       totalCustomers,
+			"new_monthly": newMonthlyCustomers,
+		},
+		"trends": gin.H{
+			"revenue_monthly_growth":      revenueMonthlyGrowth,
+			"revenue_yearly_growth":       revenueYearlyGrowth,
+			"appointments_today_growth":   appointmentsTodayGrowth,
+			"appointments_monthly_growth": appointmentsMonthlyGrowth,
+			"customers_growth":            customersGrowth,
+		},
 	}
 
 	c.JSON(http.StatusOK, gin.H{

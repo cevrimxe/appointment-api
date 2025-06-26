@@ -20,6 +20,10 @@ type PaymentService interface {
 	RefundPayment(paymentID int, reason string) error
 	GetTotalRevenue(startDate, endDate time.Time) (float64, error)
 	GetPaymentsByStatus(status models.PaymentStatus, limit, offset int) ([]*models.Payment, error)
+	GetMonthlyRevenue() (float64, error)
+	GetYearlyRevenue() (float64, error)
+	GetPreviousMonthlyRevenue() (float64, error)
+	GetPreviousYearlyRevenue() (float64, error)
 }
 
 type paymentService struct {
@@ -187,4 +191,42 @@ func (s *paymentService) GetPaymentsByStatus(status models.PaymentStatus, limit,
 		offset = 0
 	}
 	return s.paymentRepo.GetByStatus(status, limit, offset)
+}
+
+func (s *paymentService) GetMonthlyRevenue() (float64, error) {
+	now := time.Now()
+	startOfMonth := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location())
+	endOfMonth := startOfMonth.AddDate(0, 1, 0).Add(-time.Second)
+
+	return s.paymentRepo.GetTotalByDateRange(startOfMonth, endOfMonth)
+}
+
+func (s *paymentService) GetYearlyRevenue() (float64, error) {
+	now := time.Now()
+	startOfYear := time.Date(now.Year(), 1, 1, 0, 0, 0, 0, now.Location())
+	endOfYear := time.Date(now.Year()+1, 1, 1, 0, 0, 0, 0, now.Location()).Add(-time.Second)
+
+	return s.paymentRepo.GetTotalByDateRange(startOfYear, endOfYear)
+}
+
+func (s *paymentService) GetPreviousMonthlyRevenue() (float64, error) {
+	now := time.Now()
+	startOfPrevMonth := time.Date(now.Year(), now.Month()-1, 1, 0, 0, 0, 0, now.Location())
+	endOfPrevMonth := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location()).Add(-time.Second)
+
+	// Handle year transition
+	if now.Month() == 1 {
+		startOfPrevMonth = time.Date(now.Year()-1, 12, 1, 0, 0, 0, 0, now.Location())
+		endOfPrevMonth = time.Date(now.Year(), 1, 1, 0, 0, 0, 0, now.Location()).Add(-time.Second)
+	}
+
+	return s.paymentRepo.GetTotalByDateRange(startOfPrevMonth, endOfPrevMonth)
+}
+
+func (s *paymentService) GetPreviousYearlyRevenue() (float64, error) {
+	now := time.Now()
+	startOfPrevYear := time.Date(now.Year()-1, 1, 1, 0, 0, 0, 0, now.Location())
+	endOfPrevYear := time.Date(now.Year(), 1, 1, 0, 0, 0, 0, now.Location()).Add(-time.Second)
+
+	return s.paymentRepo.GetTotalByDateRange(startOfPrevYear, endOfPrevYear)
 }

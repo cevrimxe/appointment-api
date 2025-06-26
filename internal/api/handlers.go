@@ -140,6 +140,7 @@ func SetupRoutes(router *gin.Engine, handlers *Handlers, svc *services.Services,
 		{
 			// Dashboard Stats
 			admin.GET("/stats", handlers.Admin.GetStats)
+			admin.GET("/dashboard/stats", handlers.Admin.GetDashboardStats)
 
 			// Categories CRUD
 			adminCategories := admin.Group("/categories")
