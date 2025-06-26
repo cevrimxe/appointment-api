@@ -6,6 +6,9 @@ import (
 	"appointment-api/internal/repository"
 	"database/sql"
 	"errors"
+	"fmt"
+	"strconv"
+	"strings"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
@@ -189,7 +192,7 @@ func (s *authService) UpdateProfile(user *models.User) (*models.User, error) {
 
 func (s *authService) ForgotPassword(email string) error {
 	// Check if user exists
-	_, err := s.userRepo.GetByEmail(email)
+	user, err := s.userRepo.GetByEmail(email)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return errors.New("user not found")
@@ -197,13 +200,41 @@ func (s *authService) ForgotPassword(email string) error {
 		return err
 	}
 
-	// TODO: Implement actual password reset token generation and email sending
-	// For now just return success
+	// Generate reset token (in production, this should be sent via email)
+	resetToken := fmt.Sprintf("reset_%d_%d", user.ID, time.Now().Unix())
+
+	// In a real application:
+	// 1. Store the token with expiration in database
+	// 2. Send email with reset link containing the token
+	// For demo purposes, we'll just log it
+	fmt.Printf("Password reset token for %s: %s\n", email, resetToken)
+
 	return nil
 }
 
 func (s *authService) ResetPassword(token, newPassword string) error {
-	// TODO: Implement actual token validation and password reset
-	// For now return error indicating not implemented
-	return errors.New("password reset functionality not fully implemented")
+	// Basic token validation (in production, validate against stored tokens)
+	if !strings.HasPrefix(token, "reset_") {
+		return errors.New("invalid reset token")
+	}
+
+	// Extract user ID from token (simplified for demo)
+	parts := strings.Split(token, "_")
+	if len(parts) != 3 {
+		return errors.New("invalid token format")
+	}
+
+	userID, err := strconv.Atoi(parts[1])
+	if err != nil {
+		return errors.New("invalid token")
+	}
+
+	// Hash new password
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(newPassword), bcrypt.DefaultCost)
+	if err != nil {
+		return err
+	}
+
+	// Update password
+	return s.userRepo.UpdatePassword(userID, string(hashedPassword))
 }
