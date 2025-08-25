@@ -56,13 +56,24 @@
 
 ## 🌊 Overview
 
+The Appointment API is a comprehensive REST API service built with Go and Gin framework, designed to manage appointments, users, and services in a multi-tenant environment. This system provides a robust backend for scheduling applications, supporting features like user authentication, appointment management, service categorization, and payment processing. It's built with scalability and security in mind, using modern Go practices and a clean architecture approach.
 
 
 ---
 
 ## 💦 Features
 
-<code>❯ REPLACE-ME</code>
+- **🔐 Multi-tenant Architecture**: Support for multiple business entities with isolated data
+- **👥 User Management**: Complete user authentication and authorization system
+- **📅 Appointment Scheduling**: Flexible appointment booking and management
+- **💼 Service Management**: Categorization and management of services
+- **💳 Payment Processing**: Integrated payment handling system
+- **📱 Device Management**: Support for multiple devices and notifications
+- **⚙️ Settings Management**: Customizable system settings per tenant
+- **📊 Reporting**: Built-in reporting capabilities
+- **🔄 CORS Support**: Cross-Origin Resource Sharing enabled
+- **📝 Logging**: Comprehensive logging system
+- **🔒 Security**: JWT-based authentication and middleware protection
 
 ---
 
@@ -114,15 +125,15 @@
 			</thead>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/go.sum'>go.sum</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'>Go module dependency checksums</td>
 				</tr>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/appointment-api'>appointment-api</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'>Main executable binary file</td>
 				</tr>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/go.mod'>go.mod</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'>Go module definition and dependency management</td>
 				</tr>
 			</table>
 		</blockquote>
@@ -148,7 +159,7 @@
 					</thead>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/cmd/server/main.go'>main.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Application entry point and server initialization</td>
 						</tr>
 					</table>
 				</blockquote>
@@ -170,11 +181,11 @@
 			</thead>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/migrations/001_public_schema.sql'>001_public_schema.sql</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'>Initial database schema setup</td>
 				</tr>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/migrations/005_complete_tenant_schema.sql'>005_complete_tenant_schema.sql</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'>Multi-tenant schema implementation</td>
 				</tr>
 			</table>
 		</blockquote>
@@ -200,19 +211,19 @@
 					</thead>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/api/auth_handler.go'>auth_handler.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Authentication and authorization request handlers</td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/api/handlers.go'>handlers.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Common API request handlers and utilities</td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/api/admin_handler.go'>admin_handler.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Administrative endpoints and operations</td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/api/public_handler.go'>public_handler.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Public API endpoints and handlers</td>
 						</tr>
 					</table>
 				</blockquote>
@@ -308,19 +319,19 @@
 					</thead>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/middleware/auth.go'>auth.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Authentication middleware for request validation</td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/middleware/tenant.go'>tenant.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Multi-tenant request processing middleware</td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/middleware/logging.go'>logging.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Request logging and monitoring middleware</td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/cevrimxe/appointment-api/blob/master/internal/middleware/cors.go'>cors.go</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'>Cross-Origin Resource Sharing configuration</td>
 						</tr>
 					</table>
 				</blockquote>
@@ -505,7 +516,7 @@ go run {entrypoint}
 
 ### ❄️ Testing
 
-Appointment-api uses the {__test_framework__} test framework. Run the test suite with:
+Appointment-api uses Go's built-in testing package with testify assertions for enhanced testing capabilities. Run the test suite with:
 
 **Using [go modules](https://golang.org/):**
 ```sh
@@ -516,9 +527,11 @@ go test ./...
 
 ## 🧊 Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`v1.0.0`**: <strike>Core API implementation with basic appointment and user management</strike>
+- [ ] **`v1.1.0`**: Advanced scheduling features with recurring appointments
+- [ ] **`v1.2.0`**: Enhanced reporting and analytics
+- [ ] **`v1.3.0`**: Mobile app integration with push notifications
+- [ ] **`v2.0.0`**: Real-time scheduling and instant notifications
 
 ---
 
@@ -573,7 +586,11 @@ Appointment-api is protected under the [LICENSE](https://choosealicense.com/lice
 
 ## ✨ Acknowledgments
 
-- Credit `contributors`, `inspiration`, `references`, etc.
+- Thanks to the Go community for excellent documentation and support
+- [Gin Web Framework](https://gin-gonic.com/) for providing a robust foundation
+- [JWT-Go](https://github.com/golang-jwt/jwt) for secure authentication
+- All contributors who have helped shape and improve this project
+- Special thanks to the open source community for inspiration and shared knowledge
 
 <div align="right">
 
