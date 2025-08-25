@@ -505,12 +505,46 @@ Build appointment-api from the source and intsall dependencies:
 
 ### 🔹 Usage
 
-Run the project with:
+1. **Configure your environment:**
+   Create a `config.env` file in the root directory with your configuration settings. Here's an example:
 
-**Using [go modules](https://golang.org/):**
-```sh
-go run {entrypoint}
-```
+   ```env
+   # Database Configuration
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_USER=postgres
+   DB_PASSWORD=your_password
+   DB_NAME=appointment_db
+   DB_SSLMODE=disable
+
+   # Server Configuration
+   SERVER_PORT=8080
+
+   # JWT Configuration
+   JWT_SECRET=your-secret-key
+
+   # App Configuration
+   APP_ENV=development
+   APP_DEBUG=true
+
+   # Cloudinary Configuration (Optional - for file uploads)
+   CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_API_KEY=your_api_key
+   CLOUDINARY_API_SECRET=your_api_secret
+   ```
+
+2. **Start the server:**
+   ```sh
+   ❯ ./appointment-api
+   ```
+   
+   Or run directly with Go:
+   ```sh
+   ❯ go run ./cmd/server
+   ```
+
+3. **Access the API:**
+   The API will be available at `http://localhost:8080` by default (or the port specified in your config)
 
 ### ❄️ Testing
 
